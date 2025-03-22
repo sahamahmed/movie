@@ -17,4 +17,8 @@ app.use(express.json({ limit: "50mb" }));
 
 app.use(errorMiddleware);
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 export { app };
